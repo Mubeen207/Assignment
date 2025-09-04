@@ -130,3 +130,29 @@ function Before_After_type() {
 }
 // Before_After_type();
 //---------------------------------------------------------------------------
+function lowercase() {
+  let lowercase_Before = document.getElementById("lowercase-Before");
+  let lowercase_After = document.getElementById("lowercase-After");
+  let lowercaseString = prompt(
+    "Enter Your Word Do You Want To Convert To LowerCase"
+  );
+  lowercase_Before.innerHTML = lowercaseString;
+
+  lowercase_After.innerHTML = lowercaseString.toLowerCase();
+}
+// lowercase();
+//-------------------------------------------------------------------------------
+function Titlecase() {
+  let Titlecase_Before = document.getElementById("Titlecase-Before");
+  let Titlecase_After = document.getElementById("Titlecase-After");
+  let TitlecaseString = prompt(
+    "Enter Your Word Do You Want To Convert To TitlecaseCase"
+  );
+  Titlecase_Before.innerHTML = TitlecaseString;
+  let TitlecaseStringUpdated =
+    TitlecaseString[0].toUpperCase() + TitlecaseString.slice(1);
+
+  Titlecase_After.innerHTML = TitlecaseStringUpdated;
+}
+// Titlecase();
+//---------------------------------------------------------------------------------
