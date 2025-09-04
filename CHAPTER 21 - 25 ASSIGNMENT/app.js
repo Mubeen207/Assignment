@@ -156,3 +156,47 @@ function Titlecase() {
 }
 // Titlecase();
 //---------------------------------------------------------------------------------
+function NumTOStr() {
+  let NumTOStr_Before = document.getElementById("NumTOStr-Before");
+  let NumTOStr_After = document.getElementById("NumTOStr-After");
+
+  let number = +prompt("Enter Number Please Convert To String");
+  NumTOStr_Before.innerHTML = "Number: " + number;
+  let string = number.toString().replace(".", "");
+
+  NumTOStr_After.innerHTML = "String: " + string;
+}
+// NumTOStr();
+//------------------------------------------------------------------------------------
+function Username_Validation() {
+  let username;
+  let isValid = false;
+
+  // Repeat until a valid username is entered
+  while (!isValid) {
+    username = prompt("Enter your username:");
+    isValid = true; // assume valid first
+
+    for (let i = 0; i < username.length; i++) {
+      let charCode = username.charCodeAt(i);
+      console.log(username.charCodeAt(i));
+      
+
+      // Invalid characters check
+      if (
+        charCode === 64 ||
+        charCode === 46 ||
+        charCode === 44 ||
+        charCode === 33
+      ) {
+        isValid = false;
+        alert("Invalid username! Please avoid using [@ . , !]");
+        break; // no need to check more
+      }
+    }
+  }
+
+  // Final valid username display
+  console.log("✅ Valid Username: " + username);
+}
+Username_Validation();
